@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true
 })
     .then(() => {
-        app.listen(process.env.PORT, () => {
+        app.listen(process.env.PORT || 6010, () => {
             console.log(`Server running on port http://localhost:${process.env.PORT}`);
         })
     })
